@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": ["esnext"],
+    "lib": ["esnext", "es6"],
     "allowJs": true,
     "jsx": "react-native",
     "noEmit": true,
@@ -39,13 +39,15 @@
       "@services/*": ["./services/*"],
       "@screens/*": ["./screens/*"],
       "@utils": ["./utils/"],
-      "@assets": ["./assets/"]
+      "@assets": ["./assets/"],
+      "test": ["__tests__"],
     }
   },
   "exclude": [
-    "node_modules",
+    "node_modules/*",
     "babel.config.js",
     "metro.config.js",
-    "jest.config.js"
+    "jest.config.js",
+    "/src/__tests__/*"
   ]
 }

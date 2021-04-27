@@ -21,7 +21,7 @@ const Navigation = () => {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            let iconName: string = "";
+            let iconName = "";
             if (route.name === SCREENS.GAME_START) {
               iconName = focused ? "game-controller" : "game-controller";
             } else if (route.name === SCREENS.GAME_END) {

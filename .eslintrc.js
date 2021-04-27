@@ -1,6 +1,11 @@
 module.exports = {
   root: true,
-  extends: "@react-native-community",
+  extends: [
+    "@react-native-community",
+    "prettier/@typescript-eslint",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   parser: "@typescript-eslint/parser",
   plugins: ["import", "eslint-plugin-import", "@typescript-eslint"],
   settings: {
@@ -38,6 +43,7 @@ module.exports = {
     ],
     "max-len": ["error", 120],
     "@typescript-eslint/ban-ts-comment": 2,
+    "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
@@ -73,5 +79,8 @@ module.exports = {
     camelcase: 2,
     "prefer-destructuring": 2,
     "no-nested-ternary": 2,
+  },
+  env: {
+    "jest/globals": true,
   },
 };
